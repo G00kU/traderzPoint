@@ -1,9 +1,10 @@
+import axios from 'axios';
+import { useState } from 'react';
 import { Button, Box, Container, Typography } from '@mui/material';
 import { newsColumns, getTradingViewNews } from '../rapidAPI/tradingView/news';
 import { DataGrid, GridOverlay } from '@mui/x-data-grid';
-import ReactLoading from 'react-loading';
-import axios from 'axios';
-import { useState } from 'react';
+import { CustomLoadingOverlay } from '../utils/muiDataGridLoader';
+
 
 export const NewsContainer = () => {
     const [news, setNews] = useState([]);
@@ -40,19 +41,6 @@ export const NewsContainer = () => {
         </Box >
     </>
 };
-const CustomLoadingOverlay = () => (
-    <GridOverlay>
-        <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            height="100%"
-            width="100%"
-        >
-            <ReactLoading type='bars' color='yellow' />
-        </Box>
-    </GridOverlay>
-);
 
 const newsData = [
     {
