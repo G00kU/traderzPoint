@@ -1,5 +1,5 @@
 import { Button, Box, Container, Typography } from '@mui/material';
-import { newsColumns, getNews } from '../rapidAPI/tradingView/news';
+import { newsColumns, getTradingViewNews } from '../rapidAPI/tradingView/news';
 import { DataGrid, GridOverlay } from '@mui/x-data-grid';
 import ReactLoading from 'react-loading';
 import axios from 'axios';
@@ -9,7 +9,7 @@ export const NewsContainer = () => {
     const [news, setNews] = useState([]);
     const getLatestNews = async () => {
         try {
-            const response = await axios.request(getNews);
+            const response = await axios.request(getTradingViewNews);
             console.log(response.data);
             setNews(response.data);
         } catch (error) {

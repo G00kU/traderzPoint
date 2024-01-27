@@ -1,3 +1,5 @@
+import { getTradingViewNewsAPI } from "../../apiConfig";
+
 export const newsColumns = [
   {
     field: "title",
@@ -28,9 +30,9 @@ export const newsColumns = [
     },
   },
 ];
-export const getNews = {
+export const getTradingViewNews = {
   method: "GET",
-  url: "https://trading-view.p.rapidapi.com/news/list",
+  url: getTradingViewNewsAPI,
   params: {
     page: "1",
     per_page: "20",
@@ -39,7 +41,7 @@ export const getNews = {
     locale: "en",
   },
   headers: {
-    "X-RapidAPI-Key": "8c19ad59ecmshe21fd5e9a2d54f8p1e8e35jsn471fedd47f97",
+    "X-RapidAPI-Key": process.env.TRADERZ_POINT_API_KEY_RAPIDAPI,
     "X-RapidAPI-Host": "trading-view.p.rapidapi.com",
   },
 };

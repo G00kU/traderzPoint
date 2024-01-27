@@ -1,8 +1,9 @@
-export const getLatestAPI = {
+import { getLatesStockPriceAPI } from "../../apiConfig";
+export const getLatestStock = {
   method: "GET",
-  url: "https://latest-stock-price.p.rapidapi.com/any",
+  url: getLatesStockPriceAPI,
   headers: {
-    "X-RapidAPI-Key": "8c19ad59ecmshe21fd5e9a2d54f8p1e8e35jsn471fedd47f97",
+    "X-RapidAPI-Key": process.env.TRADERZ_POINT_API_KEY_RAPIDAPI,
     "X-RapidAPI-Host": "latest-stock-price.p.rapidapi.com",
   },
 };
