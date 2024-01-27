@@ -5,3 +5,6 @@ body{
 .bgYellow{
     background-color: rgb(255, 255, 0);
 }
+.cursorHand:hover{
+    cursor: pointer;
+}

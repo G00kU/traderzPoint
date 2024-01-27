@@ -1,23 +1,22 @@
 import { getTradingViewNewsAPI } from "../../apiConfig";
 
-export const newsColumns = [
+export const tradingViewNewsColumns = [
   {
     field: "title",
     headerName: "HeadLines",
-    flex: 1,
-    minWidth: 400,
     headerAlign: "center",
+    flex: 1,
   },
   {
     field: "shortDescription",
     headerName: "Description",
-    width: 500,
     headerAlign: "center",
+    flex: 0.5,
   },
   {
+    flex: 0.5,
     field: "provider",
     headerName: "Source",
-    width: 300,
     headerAlign: "center",
     renderCell: (params) => {
       return params?.row?.link ? (
@@ -41,7 +40,7 @@ export const getTradingViewNews = {
     locale: "en",
   },
   headers: {
-    "X-RapidAPI-Key": process.env.TRADERZ_POINT_API_KEY_RAPIDAPI,
+    "X-RapidAPI-Key": process.env.REACT_APP_TRADERZ_POINT_API_KEY_RAPIDAPI,
     "X-RapidAPI-Host": "trading-view.p.rapidapi.com",
   },
 };

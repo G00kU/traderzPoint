@@ -11,7 +11,7 @@ export const CustomLoadingOverlay = () => (
       height="100%"
       width="100%"
     >
-      <ReactLoading type="bars" color="yellow" />
+      <ReactLoading type="bars" color="red" width={100} height={100} />
     </Box>
   </GridOverlay>
 );
