@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { green, purple, yellow } from "@mui/material/colors";
+import "./App.css";
+import { Navbar } from "./components/navBar";
+import { HomePage } from "./pages/homePage";
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: yellow[400],
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+  typography: {
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Bebas Neue"',
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <Navbar userName={"Guest"} />
+        <HomePage />
+      </ThemeProvider>
+    </>
   );
 }
 
