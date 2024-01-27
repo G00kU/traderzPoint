@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/traderzPoint/static/css/main.76607d34.css",
-    "main.js": "/traderzPoint/static/js/main.a6559e0d.js",
+    "main.js": "/traderzPoint/static/js/main.5f4ac2d8.js",
     "static/js/787.18436453.chunk.js": "/traderzPoint/static/js/787.18436453.chunk.js",
     "index.html": "/traderzPoint/index.html",
     "main.76607d34.css.map": "/traderzPoint/static/css/main.76607d34.css.map",
-    "main.a6559e0d.js.map": "/traderzPoint/static/js/main.a6559e0d.js.map",
+    "main.5f4ac2d8.js.map": "/traderzPoint/static/js/main.5f4ac2d8.js.map",
     "787.18436453.chunk.js.map": "/traderzPoint/static/js/787.18436453.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76607d34.css",
-    "static/js/main.a6559e0d.js"
+    "static/js/main.5f4ac2d8.js"
   ]
 }
